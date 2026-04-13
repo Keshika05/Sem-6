@@ -1,0 +1,35 @@
+def getdict():
+d={}
+n=int(input(&quot;Enter the key-value pairs do you want to
+enter?:&quot;))
+for i in range(n):
+key=raw_input(&quot;Enter the Key:&quot;)
+value=raw_input(&quot;Enter the Value:&quot;)
+d[key]=value
+return d
+def check(dictionary):
+search=raw_input(&quot;Enter the Key to Search:&quot;)
+found=False
+for key in dictionary:
+if key == search:
+found=True
+break
+if found:
+print&quot;Key&quot;,search,&quot;EXISTS in the dictionary&quot;
+
+else:
+print&quot;Key&quot;,search,&quot;NOT EXISTS in the dictionary&quot;
+print&quot;Enter details for dict_1:&quot;
+dict1=getdict()
+print&quot;Enter details for dict_2:&quot;
+dict2=getdict()
+
+dict3={}
+for key in dict1:
+dict3[key]=dict1[key]
+for key in dict2:
+dict3[key]=dict2[key]
+print&quot;Dictionary_1:&quot;,dict1
+print&quot;Dictionary_2:&quot;,dict2
+print&quot;Concatenated Dictionary_3:&quot;,dict3
+check(dict3)

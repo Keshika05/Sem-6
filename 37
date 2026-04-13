@@ -1,0 +1,19 @@
+a=raw_input(&quot;Enter the String:&quot;)
+def lowup(a):
+uppercount=0
+lowercount=0
+upperchar=&quot; &quot;
+lowerchar=&quot; &quot;
+for char in a:
+if char.isupper():
+uppercount+=1
+upperchar+=char
+elif char.islower():
+lowercount+=1
+lowerchar+=char
+print&quot;The Upper case in the string is:&quot;,upperchar,&quot;: No.of Upper
+cases:&quot;,uppercount
+print&quot;The Lower case in the string is:&quot;,lowerchar,&quot;: No.of Lower
+cases:&quot;,lowercount
+print&quot;The String:&quot;,a
+lowup(a)

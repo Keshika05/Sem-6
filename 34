@@ -1,0 +1,17 @@
+a=raw_input(&quot;Enter the element for the set_1 with space
+separated: &quot;)
+set1=set(a.split())
+
+b=raw_input(&quot;Enter the element for the set_2 with space
+separated: &quot;)
+set2=set(b.split())
+print&quot;SET_1: &quot;,tuple(set1)
+print&quot;SET_2: &quot;,tuple(set2)
+s3=set1.intersection(set2)
+print&quot;The INTERSECTION of the set is: &quot;,tuple(s3)
+s4=set1.union(set2)
+print&quot;The UNION of the set is: &quot;,tuple(s4)
+s5=set1.difference(set2)
+print&quot;The DIFFERENCE of the set_1 from set_2 is: &quot;,tuple(s5)
+s6=set2.difference(set1)
+print&quot;The DIFFERENCE of the set_2 from set_1 is: &quot;,tuple(s6)

@@ -1,0 +1,9 @@
+a=raw_input(&quot;Enter the First string:&quot;)
+b=raw_input(&quot;Enter the Second string:&quot;)
+print&quot;Original String_1:&quot;,a
+print&quot;Original String-2:&quot;,b
+x=b[0]+a[1:]
+y=a[0]+b[1:]
+result=x+&quot; &quot;+y
+print&quot;The string after swap of first letter &amp; Merge of two
+strings:&quot;,result

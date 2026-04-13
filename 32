@@ -1,0 +1,17 @@
+a=int(input(&quot;Enter the number of elements for the set:&quot;))
+
+list1=[]
+for i in range (a):
+list1.append(int(input(&quot;Enter the Value:&quot;)))
+print&quot;The List is:&quot;,list1
+set1=set(list1)
+print&quot;The set is:&quot;,tuple(set1)
+a=len(set1)
+print&quot;The Length of the set:&quot;,a
+def check(set1,elt):
+If elt in set1:
+print elt,&quot;is present in the Set&quot;
+else:
+print elt,&quot;is not present in set&quot;
+k=int(input(&quot;Enter the value for Check:&quot;))
+check(set1,k)

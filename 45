@@ -1,0 +1,11 @@
+class count:
+temp=0
+def __init__(self,name):
+self.name=name
+count.temp+=1
+
+c=int(input(&quot;How many Count oblects do you want to crete:&quot;))
+for i in range(c):
+c1=raw_input(&quot;Enter the Name for the Object:&quot;)
+count(c1)
+print &quot;Total Number of instances Created:&quot;+str(count.temp)

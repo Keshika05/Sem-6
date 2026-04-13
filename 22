@@ -1,0 +1,9 @@
+a=raw_input(&quot;Enter the values for Tuples :&quot;).split()
+tup=tuple(a)
+print&quot;The Tuple is:&quot;,tup
+c=raw_input(&quot;Enter the Value for checking the element:&quot;)
+if c in tup:
+
+print&quot;Element&quot;,c,&quot; is present in the tuple&quot;
+else:
+print&quot;Element&quot;,c,&quot;is not present in the tuple&quot;

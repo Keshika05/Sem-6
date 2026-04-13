@@ -1,0 +1,14 @@
+brexp=float(input())
+toexp=float(input())
+foexp=float(input())
+loexp=float(input())
+t=brexp+toexp+foexp+loexp
+print("Total Expense: ",t)
+bre_percent=(brexp/t)*100
+print("Bread Expense: ",bre_percent)
+top_percent=(toexp/t)*100
+print("Toppings Expense: ",round(top_percent,2))
+frost_percent=(foexp/t)*100
+print("Frosting Expense: ",round(frost_percent,2))
+log_percent=(loexp/t)*100
+print("Logistics Expense: ",round(log_percent,2))

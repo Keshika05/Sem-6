@@ -1,0 +1,23 @@
+# Bakery Monthly Expense Report Calculator
+
+# Read input values
+brexp = float(input())  # Bread expense
+trexp = float(input())  # Toppings expense
+foexp = float(input())  # Frosting expense
+loexp = float(input())  # Logistics expense
+
+# Calculate total expense
+t = brexp + trexp + foexp + loexp
+
+# Calculate percentage contribution of each category
+bre_percent = (brexp / t) * 100
+top_percent = (trexp / t) * 100
+frost_percent = (foexp / t) * 100
+log_percent = (loexp / t) * 100
+
+# Print results with proper formatting (rounded to 2 decimal places)
+print(f"Total Expense: {t:.2f}")
+print(f"Bread Expense: {bre_percent:.2f}")
+print(f"Toppings Expense: {top_percent:.2f}")
+print(f"Frosting Expense: {frost_percent:.2f}")
+print(f"Logistics Expense: {log_percent:.2f}")

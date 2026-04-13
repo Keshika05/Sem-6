@@ -1,0 +1,19 @@
+dict1={&quot;a&quot;:1, &quot;b&quot;:2, &quot;c&quot;:3, &quot;d&quot;:4}
+dict2={&quot;j&quot;:5, &quot;k&quot;:6, &quot;m&quot;:7, &quot;r&quot;:8}
+print(&quot;Dictionary_1:&quot;,dict1)
+print(&quot;Dictionary_2:&quot;,dict2)
+mer_or = dict(dict1.items()|dict2.items())
+print(&quot;Merged using OR Operator:&quot;,mer_or)
+mer_up= {**dict1, **dict2}
+print(&quot;Merged using Unpacking method:&quot;,mer_up)
+mer_ud={}
+for key in dict1:
+mer_ud[key]=dict1[key]
+mer_ud.update(dict2)
+print(&quot;Merged using Update method:&quot;,mer_ud)
+mer_lo={}
+for key in dict1:
+mer_lo[key]=dict1[key]
+for key in dict2:
+mer_lo[key]=dict2[key]
+print(&quot;Merged using Loop:&quot;,mer_lo)

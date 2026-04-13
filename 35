@@ -1,0 +1,17 @@
+a=raw_input(&quot;Enter the Set_1 value with space separated: &quot;)
+s1=set(a.split())
+b=raw_input(&quot;Enter the Set_2 value with space separated: &quot;)
+s2=set(b.split())
+print&quot;SET_1: &quot;,tuple(s1)
+print&quot;SET_2: &quot;,tuple(s2)
+c=s1.issubset(s2)
+if(c==True):
+print&quot;Set_1 is subset of Set_2&quot;
+else:
+
+print&quot;Set_1 is not a subset of Set_2&quot;
+d=s2.issubset(s1)
+if(d==True):
+print&quot;Set_2 is a subset of Set_1&quot;
+else:
+print&quot;Set_2 is not a subset of Set_1&quot;

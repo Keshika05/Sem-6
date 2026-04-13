@@ -1,0 +1,25 @@
+class person:
+def __init__(self,name,age,weight,height):
+self.name=name
+self.age=age
+self.weight=weight
+self.height=height
+def get(self):
+
+h=self.height*0.3048
+bmi=(self.weight/(h**2))
+if bmi&lt;18.5:
+print&quot;Under Weight&quot;
+elif (18.5&lt;=bmi&lt;=24.9):
+print&quot;Healty&quot;
+else:
+print &quot;Obese&quot;
+
+n=int(input(&quot;Enter number of persons:&quot;))
+for i in range(n):
+name=raw_input(&quot;Enter the Name:&quot;)
+age=int(input(&quot;Enter the Age:&quot;))
+weight=float(input(&quot;Enter the Weight in Kg:&quot;))
+height=float(input(&quot;Enter the Height in Feet:&quot;))
+p=person(name,age,weight,height)
+d=p.get()

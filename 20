@@ -1,0 +1,4 @@
+a=raw_input(&quot;Enter the elements with space saparated:&quot;).split()
+print&quot;The List is:&quot;,a
+t=tuple(a)
+print&quot;The Tuple is:&quot;,t

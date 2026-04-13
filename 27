@@ -1,0 +1,10 @@
+list1=[]
+
+key=raw_input(&quot;Enter the key word :&quot;)
+while True:
+n=raw_input(&quot;Enter the value:&quot;)
+if(key==n):
+break
+list1.append(n)
+tup=tuple(list1)
+print&quot;The tuple is:&quot;,tup

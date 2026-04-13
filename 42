@@ -1,0 +1,15 @@
+a=raw_input(&quot;Enter the String:&quot;)
+digit=0
+space=0
+alpha=0
+for ch in a:
+if ch&gt;=&quot;0&quot; and ch&lt;=&quot;9&quot;:
+digit+=1
+elif ch==&quot; &quot;:
+space+=1
+elif (ch&gt;=&quot;a&quot; and ch&lt;=&quot;z&quot;) or (ch&gt;=&quot;A&quot; and ch&lt;=&quot;Z&quot;):
+alpha+=1
+print&quot;The String is:&quot;,a
+print&quot;No.of Digits:&quot;,digit
+print&quot;No.of Spaces:&quot;,space
+print&quot;No.of Alphabets:&quot;,alpha

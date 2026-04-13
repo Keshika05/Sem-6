@@ -1,0 +1,6 @@
+a=raw_input(&quot;Enter the tuple elements:&quot;).split()
+t=tuple(a)
+print t
+n=int(input(&quot;Enter the index_1 value:&quot;))
+m=int(input(&quot;Enter the index_2 value:&quot;))
+print&quot;After slizing:&quot;,t[n:m]

@@ -1,0 +1,11 @@
+a=raw_input(&quot;Enter the string:&quot;)
+n=len(a)
+if n&lt;3:
+print&quot;The final Answer will be:&quot;,a
+elif a[-3:]==&quot;ing&quot;:
+c=a+&quot;ly&quot;
+print&quot;The Final answer will be:&quot;,c
+
+else:
+d=a+&quot;ing&quot;
+print&quot;The final answer will be:&quot;,d

@@ -1,0 +1,6 @@
+str1=raw_input(&quot;Enter the String_1:&quot;)
+reverse_str=str1[::-1]
+print&quot;The reversed string is:&quot;,reverse_str;
+
+a=len(str1);
+print&quot;The length of the string is:&quot;,a

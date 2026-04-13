@@ -1,0 +1,5 @@
+a=raw_input(&quot;Enter the Mixed element:”).split()
+tup=tuple(a)
+print &quot;The Tuple is: &quot;,tup
+l=len(tup)
+print&quot;The Length of the Tuple is: &quot;,l

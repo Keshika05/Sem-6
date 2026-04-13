@@ -1,0 +1,6 @@
+a=raw_input(&quot;Enter the String_1:&quot;)
+b=raw_input(&quot;Enter the String_2:&quot;)
+print&quot;The String_1:&quot;,a
+print&quot;The String_2:&quot;,b
+c=a+b
+print&quot;After Concatenation the srtring is:&quot;,c

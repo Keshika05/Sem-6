@@ -1,0 +1,30 @@
+import requests
+
+
+def get_weather(city, api_key):
+    url = f"http://openweathermap.org{city}&appid={api_key}&units=metric"
+
+    try:
+        response = requests.get(url)
+        # Check if the request was successful (Status code 200)
+        response.raise_for_status()
+
+        data = response.json()
+        temp = data["main"]["temp"]
+        description = data["weather"][0]["description"]
+        humidity = data["main"]["humidity"]
+
+        print(f"\n🌍 Weather in {city.capitalize()}:")
+        print(f"🌡️ Temperature: {temp}°C")
+        print(f"☁️ Condition: {description.capitalize()}")
+        print(f"💧 Humidity: {humidity}%")
+
+    except requests.exceptions.HTTPError:
+        print("❌ City not found! Please check the spelling.")
+    except Exception as e:
+        print(f"❌ An error occurred: {e}")
+
+
+# Example usage:
+# API_KEY = "your_real_api_key_here"
+# get_weather("London", API_KEY)

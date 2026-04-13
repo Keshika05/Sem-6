@@ -1,0 +1,9 @@
+a=raw_input(&quot;Enter the Elements of Tuples:&quot;).split()
+tup=tuple(a)
+print&quot;The original Tuple is:&quot;,tup
+uniq=[]
+for i in tup:
+if i not in uniq:
+uniq.append(i)
+fin_tup=tuple(uniq)
+print&quot;After the removal of duplicate element:&quot;,uniq

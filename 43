@@ -1,0 +1,32 @@
+class vehicle:
+def get(self,vec_type,brand,model,year,price,color):
+self.vec_type=vec_type
+self.brand=brand
+self.model=model
+self.year=year
+self.price=price
+
+self.color=color
+def display(self):
+print&quot;The Vehicle type:&quot;,self.vec_type
+print&quot;The Brand:&quot;,self.brand
+print&quot;The Model:&quot;,self.model
+print&quot;The Year:&quot;,self.year
+print&quot;The price:&quot;,self.price
+print&quot;The Color:&quot;,self.color
+n=int(input(&quot;Enter the number of Vehicles:&quot;))
+vehicles=[]
+for i in range (n):
+vt=raw_input(&quot;Enter the Vechicle type:&quot;)
+b=raw_input(&quot;Enter the Brand:&quot;)
+m=raw_input(&quot;Enter the Model:&quot;)
+y=int(input(&quot;Enter the year when the car is marketed:&quot;))
+p=int(input(&quot;Enter the Price:&quot;))
+c=raw_input(&quot;Enter the Color:&quot;)
+v=vehicle()
+v.get(vt,b,m,y,p,c)
+vehicles.append(v)
+print&quot;All Vehicles:&quot;
+for v in vehicles:
+print
+v.display()

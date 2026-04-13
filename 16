@@ -1,0 +1,46 @@
+import os
+import shutil
+
+
+def organize_folder(folder_path):
+    # Mapping of file extensions to folder names
+    file_types = {
+        "Images": [".jpg", ".jpeg", ".png", ".gif"],
+        "Documents": [".pdf", ".docx", ".txt", ".xlsx"],
+        "Videos": [".mp4", ".mkv", ".mov"],
+        "Archives": [".zip", ".rar", ".tar"],
+    }
+
+    # Loop through all files in the directory
+    for file in os.listdir(folder_path):
+        filepath = os.path.join(folder_path, file)
+
+        # Skip directories
+        if os.path.isdir(filepath):
+            continue
+
+        file_ext = os.path.splitext(file)[1].lower()
+
+        # Find which category the file belongs to
+        moved = False
+        for folder_name, extensions in file_types.items():
+            if file_ext in extensions:
+                target_folder = os.path.join(folder_path, folder_name)
+
+                # Create the folder if it doesn't exist
+                os.makedirs(target_folder, exist_ok=True)
+
+                shutil.move(filepath, os.path.join(target_folder, file))
+                print(f"Moved {file} to {folder_name}")
+                moved = True
+                break
+
+        # If it doesn't match mapped types, move to 'Others'
+        if not moved:
+            others_folder = os.path.join(folder_path, "Others")
+            os.makedirs(others_folder, exist_ok=True)
+            shutil.move(filepath, os.path.join(others_folder, file))
+
+
+# Example usage (Replace with your actual folder path):
+# organize_folder("/Users/username/Downloads")

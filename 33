@@ -1,0 +1,25 @@
+a=raw_input(&quot;Enter the list elements with space separated:&quot;).split()
+list1=list(a)
+print&quot;The List:&quot;,list1
+s1=set(list1)
+print &quot;The Set after removal of duplicate elements from
+list:&quot;,tuple(s1)
+
+def adds(s1,k):
+s2=set()
+if k not in s1:
+s1.add(k)
+print&quot;After adding&quot;,k,&quot;to set:&quot;,tuple(s1)
+else:
+print&quot;Element already exits&quot;
+def removal(s1,v):
+if v not in s1:
+print&quot;Element does not exits in the Set&quot;
+else:
+s1.remove(v)
+print&quot;After removal of &quot;,v,&quot; from the Set, The set is
+:&quot;,tuple(s1)
+k=raw_input(&quot;Enter the value to add in the Set: &quot;)
+adds(s1,k)
+v=raw_input(&quot;Enter the value for the removal element in the set: &quot;)
+removal(s1,v)

@@ -1,0 +1,12 @@
+def sums(dictionary):
+tot=0
+for key in dictionary:
+tot=tot+dictionary[key]
+return tot
+n=int(input(&quot;Enter the value:&quot;))
+squ={}
+for x in range(1,n+1):
+squ[x]=x*x
+print&quot;Dictionary x:x^2:&quot;,squ
+res=sums(squ)
+print&quot;Sum of all values in the dictionary:&quot;,res

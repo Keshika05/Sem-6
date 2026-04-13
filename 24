@@ -1,0 +1,4 @@
+tup=((1,2),(3,4),(5,4))
+print&quot;The original tuple of tuple is:&quot;,tup
+flat=sum(tup,())
+print&quot;The final tuple is:&quot;,flat

@@ -1,0 +1,8 @@
+a=raw_input(&quot;Enter the Tuple_1 elements:&quot;).split()
+b=raw_input(&quot;Enter the Tuple_2 elements:&quot;).split()
+tup1=tuple(a)
+tup2=tuple(b)
+print&quot;The Tuple_1 is:&quot;,tup1
+print&quot;The Tuple_2 is:&quot;,tup2
+tup3=tup1+tup2
+print&quot;The merged tuple is:&quot;,tup3

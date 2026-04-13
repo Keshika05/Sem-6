@@ -1,0 +1,49 @@
+def add(dictionary):
+newkey=raw_input(&quot;Enter the new Key: &quot;)
+newval=int(input(&quot;Enter the new Value: &quot;))
+dictionary[newkey]=newval
+return dictionary
+
+dict1={&quot;k&quot;:1,&quot;t&quot;:4,&quot;m&quot;:2,&quot;s&quot;:3}
+print&quot;Original Dictionary: &quot;,dict1
+keys=list(dict1.keys())
+values=list(dict1.values())
+a=len(keys)
+b=len(values)
+for i in range(0,a):
+for j in range (i+1,b):
+if values[i]&gt;values[j]:
+temp=values[i]
+values[i]=values[j]
+values[j]=temp
+temp=keys[i]
+keys[i]=keys[j]
+keys[j]=temp
+
+sortdict={}
+for i in range (0,a):
+sortdict[keys[i]]=values[i]
+
+print &quot;Sorted Dictionary by Ascending Order:&quot;,sortdict
+sortdict=add(sortdict)
+print&quot;Dictionary after adding new key: &quot;,sortdict
+keys=list(sortdict.keys())
+values=list(sortdict.values())
+c=len(keys)
+d=len(values)
+for i in range(0,c):
+for j in range(i+1,c):
+if values[i]&lt;values[j]:
+temp=values[i]
+values[i]=values[j]
+values[j]=temp
+tempp=keys[i]
+keys[i]=keys[j]
+keys[j]=tempp
+print&quot;Sorted Dictionary by Descending Order: {&quot;,
+for i in range(0,c):
+print&quot;&#39;&quot;+keys[i]+&quot;&#39;&quot;,
+print&quot;:&quot;,values[i],
+if i&lt;c-1:
+print&quot;,&quot;,
+print&quot;}&quot;

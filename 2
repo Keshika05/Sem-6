@@ -1,0 +1,84 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+class sstring {
+private:
+    char* str;
+    int len;
+
+public:
+    // Default constructor
+    sstring() {
+        str = new char[1]; // Allocate memory for an empty string
+        str[0] = '\0'; // Initialize to empty string
+        len = 0;
+        cout<<"Default constructor string length"<<len;
+    }
+
+    // Constructor with one string
+    sstring(const char* a) {
+        len = strlen(a);
+        str = new char[len + 1]; // Allocate memory
+        strcpy(str, a); // Copy the string
+    }
+
+    // Constructor with two strings
+    sstring(const char* a, const char* b) {
+        len = strlen(a) + strlen(b);
+        str = new char[len + 1]; // Allocate memory
+        strcpy(str, a); // Copy first string
+        strcat(str, b); // Concatenate second string
+    }
+
+    // Destructor to free allocated memory
+    ~sstring() {
+        delete[] str; // Free the allocated memory
+    }
+
+    void display() {
+        cout << "The Characters are: " << str << endl;
+    }
+
+    void findvowels() {
+        int d = 0;
+        for (int i = 0; i < len; i++) {
+            if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' ||
+                str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U') {
+                d++;
+            }
+        }
+
+        char* k = new char[d + 1]; // Allocate memory for vowels
+        int index = 0;
+        for (int i = 0; i < len; i++) {
+            if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' ||
+                str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U') {
+                k[index++] = str[i]; // Store the vowel
+            }
+        }
+        k[index] = '\0'; // Null-terminate the string
+
+        cout << "Vowels found: " << k << endl; // Display the vowels
+        delete[] k; // Free the allocated memory for vowels
+    }
+};
+
+int main() {
+    char m[100], n[133], o[190];
+     sstring s1();
+    cout << "Enter the one string: ";
+    cin >> m;
+    sstring s2(m); // Create sstring object with one string
+
+    cout << "Enter the two strings: ";
+    cin >> n >> o;
+    sstring s3(n, o); // Create sstring object with two strings
+
+    s2.display();
+    s2.findvowels();
+    s3.display();
+    s3.findvowels();
+
+    return 0;
+}

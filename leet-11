@@ -1,0 +1,22 @@
+class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        # 1. Sort intervals by the start value
+        intervals.sort(key=lambda x: x[0])
+        
+        # Initialize output with the first interval
+        output = [intervals[0]]
+        
+        for i in range(1, len(intervals)):
+            last_end = output[-1][1]
+            curr_start = intervals[i][0]
+            curr_end = intervals[i][1]
+            
+            # 2. Check for overlap
+            if curr_start <= last_end:
+                # Merge: update the end of the last interval in output
+                output[-1][1] = max(last_end, curr_end)
+            else:
+                # No overlap: add the current interval as a new entry
+                output.append(intervals[i])
+                
+        return output

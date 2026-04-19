@@ -1,0 +1,23 @@
+class Solution:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        res = []
+
+        def backtrack(start):
+            # Base case: if we've reached the end of the list, 
+            # we have a complete permutation
+            if start == len(nums):
+                res.append(nums[:]) # Append a copy of the current state
+                return
+            
+            for i in range(start, len(nums)):
+                # Swap the current element with the element at the start index
+                nums[start], nums[i] = nums[i], nums[start]
+                
+                # Recursively generate permutations for the rest of the list
+                backtrack(start + 1)
+                
+                # Backtrack: swap them back to restore the original state
+                nums[start], nums[i] = nums[i], nums[start]
+
+        backtrack(0)
+        return res

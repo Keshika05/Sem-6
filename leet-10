@@ -1,0 +1,14 @@
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
+        # Start the goal at the very last index
+        goal = len(nums) - 1
+        
+        # Iterate backwards from the end of the array
+        for i in range(len(nums) - 1, -1, -1):
+            # If we can reach the current goal from index i
+            if i + nums[i] >= goal:
+                # Move the goalpost closer to the start
+                goal = i
+        
+        # If the goalpost made it to the first index, return True
+        return goal == 0

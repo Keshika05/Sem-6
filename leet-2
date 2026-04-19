@@ -1,0 +1,37 @@
+class Solution:
+    def permuteUnique(self, nums: List[int]) -> List[List[int]]:
+        res = []
+        path = []
+        used = [False] * len(nums)
+        
+        # 1. Sort to keep duplicates together
+        nums.sort()
+        
+        def backtrack():
+            # Base case: path is full length
+            if len(path) == len(nums):
+                res.append(path[:])
+                return
+            
+            for i in range(len(nums)):
+                # Skip if already used in current path
+                if used[i]:
+                    continue
+                
+                # 2. Skip duplicates: 
+                # If current matches previous AND previous wasn't used
+                if i > 0 and nums[i] == nums[i-1] and not used[i-1]:
+                    continue
+                
+                # Standard backtracking
+                used[i] = True
+                path.append(nums[i])
+                
+                backtrack()
+                
+                # Clean up (backtrack)
+                used[i] = False
+                path.pop()
+        
+        backtrack()
+        return res

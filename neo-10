@@ -1,0 +1,6 @@
+x = int(input())
+y = int(input())
+l = int(input())
+cx = (x +x+l)//2
+cy = (y +y+l)//2
+print("The centre of the room is at ("+str(cx)+","+str(cy)+")")

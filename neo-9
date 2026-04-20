@@ -1,0 +1,5 @@
+n=int(input())
+m=int(input())
+p=n/m
+p=int(p)
+print(n-m*p)
